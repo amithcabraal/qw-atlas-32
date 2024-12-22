@@ -41,11 +41,11 @@ export default function PlayerView({
   });
 
   return (
-    <div className="h-[calc(100vh-64px)] flex flex-col mt-16">
+    <div className="h-[calc(100vh-128px)] flex flex-col mt-16">
       {/* Main content area that fills remaining space */}
       <div className="flex-1 flex flex-col">
         {/* Question card - approximately 35% of remaining height */}
-        <div className="h-[35%] p-4">
+        <div className="h-[30%] p-4">
           <QuestionCard 
             question={question} 
             questionNumber={questionNumber}
