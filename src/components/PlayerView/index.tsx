@@ -41,19 +41,22 @@ export default function PlayerView({
   });
 
   return (
-    <div className="h-[calc(100vh-128px)] flex flex-col mt-16">
-      {/* Main content area that fills remaining space */}
-      <div className="flex-1 flex flex-col">
-        {/* Question card - approximately 35% of remaining height */}
-        <div className="h-[30%] p-4">
+    <div className="fixed inset-0 flex flex-col">
+      {/* Header - fixed height 64px */}
+      <div className="h-16 flex-none" /> {/* Spacer for fixed header */}
+
+      {/* Main content area - fills available space */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Question card - 35% of remaining space */}
+        <div className="h-[35%] p-4">
           <QuestionCard 
             question={question} 
             questionNumber={questionNumber}
           />
         </div>
         
-        {/* Map container - fills remaining space */}
-        <div className="flex-1">
+        {/* Map container - 65% of remaining space */}
+        <div className="h-[65%]">
           <GameMap
             ref={mapRef}
             mapKey={mapKey}
@@ -66,8 +69,8 @@ export default function PlayerView({
         </div>
       </div>
 
-      {/* Fixed height footer section - 80px for controls */}
-      <div className="h-20 flex-none px-4">
+      {/* Controls - fixed height 80px */}
+      <div className="h-20 flex-none px-4 bg-gradient-to-t from-black/50 to-transparent">
         <AnswerControls
           error={error}
           gameStatus={gameStatus}
