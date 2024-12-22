@@ -5,6 +5,7 @@ import HostGame from './pages/HostGame';
 import JoinGame from './pages/JoinGame';
 import JoinManual from './pages/JoinManual';
 import PlayGame from './pages/PlayGame';
+import PlayerDemo from './pages/PlayerDemo';
 import HowToPlay from './pages/HowToPlay';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mapdemo" element={<MapDemo />} />
+            <Route path="/playerdemo" element={<PlayerDemo />} />
           </Routes>
         </main>
       </div>
